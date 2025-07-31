@@ -330,11 +330,3 @@ For issues and questions:
 2. Verify health endpoint: `http://your-domain/health`
 3. Review Jenkins build logs
 4. Check EC2 instance status and security groups
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Submit a pull request
