@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Check - Spring Boot CI/CD Demo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🏥 Application Health Check</h1>
+        <p class="subtitle">System Status Monitor</p>
+      </header>
+
+      <main>
+        <div class="health-card">
+          <div class="status-indicator success">
+            <span class="status-icon">✅</span>
+            <h2>Application Status: Healthy</h2>
+          </div>
+
+          <div class="health-details">
+            <div class="detail-item">
+              <span class="label">Status:</span>
+              <span class="value success" th:text="${status}"
+                >Status Message</span
+              >
+            </div>
+            <div class="detail-item">
+              <span class="label">Last Check:</span>
+              <span class="value" th:text="${timestamp}">Timestamp</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Server:</span>
+              <span class="value">Spring Boot Embedded Tomcat</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Environment:</span>
+              <span class="value">Production Ready</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="system-info">
+          <h3>📊 System Information</h3>
+          <div class="info-grid">
+            <div class="info-card">
+              <h4>Memory Status</h4>
+              <p class="status-good">✓ Normal</p>
+            </div>
+            <div class="info-card">
+              <h4>Database Connection</h4>
+              <p class="status-good">✓ Not Required</p>
+            </div>
+            <div class="info-card">
+              <h4>External Services</h4>
+              <p class="status-good">✓ All Systems Operational</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a href="/" class="btn btn-primary">← Back to Home</a>
+          <button onclick="location.reload()" class="btn btn-secondary">
+            🔄 Refresh Status
+          </button>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Spring Boot CI/CD Demo Project</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Info - Spring Boot CI/CD Demo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📋 Application Information</h1>
+        <p class="subtitle">System Details and Build Information</p>
+      </header>
+
+      <main>
+        <div class="welcome-card">
+          <h2>Application Details</h2>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="label">Application Name:</span>
+              <span class="value" th:text="${applicationName}"
+                >Application Name</span
+              >
+            </div>
+            <div class="info-item">
+              <span class="label">Version:</span>
+              <span class="value" th:text="${version}">Version</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Build Time:</span>
+              <span class="value" th:text="${buildTime}">Build Time</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Java Version:</span>
+              <span class="value" th:text="${javaVersion}">Java Version</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Spring Boot Version:</span>
+              <span class="value" th:text="${springBootVersion}"
+                >Spring Boot Version</span
+              >
+            </div>
+            <div class="info-item">
+              <span class="label">Build Tool:</span>
+              <span class="value">Maven</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-section">
+          <h3>🏗️ Technology Stack</h3>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4>☕ Backend</h4>
+              <p>Spring Boot 3.4.7 with Java 21</p>
+            </div>
+            <div class="feature-card">
+              <h4>🎨 Frontend</h4>
+              <p>Thymeleaf templates with HTML5 & CSS3</p>
+            </div>
+            <div class="feature-card">
+              <h4>🔧 Build Tool</h4>
+              <p>Apache Maven with automated testing</p>
+            </div>
+            <div class="feature-card">
+              <h4>🚀 Deployment</h4>
+              <p>Jenkins CI/CD pipeline with AWS EC2</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="system-info">
+          <h3>📊 Environment Information</h3>
+          <div class="info-grid">
+            <div class="info-card">
+              <h4>Runtime Environment</h4>
+              <p class="status-good">Java Virtual Machine</p>
+            </div>
+            <div class="info-card">
+              <h4>Web Server</h4>
+              <p class="status-good">Embedded Tomcat</p>
+            </div>
+            <div class="info-card">
+              <h4>Template Engine</h4>
+              <p class="status-good">Thymeleaf</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a href="/" class="btn btn-primary">← Back to Home</a>
+          <a href="/health" class="btn btn-secondary">🏥 Health Check</a>
+          <a href="/actuator/info" class="btn btn-secondary" target="_blank"
+            >📋 Raw Info (JSON)</a
+          >
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Spring Boot CI/CD Demo Project</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spring Boot CI/CD Demo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🚀 Spring Boot CI/CD Demo Application</h1>
+        <p class="subtitle">
+          Demonstrating Continuous Integration and Deployment
+        </p>
+      </header>
+
+      <main>
+        <div class="welcome-card">
+          <h2 th:text="${message}">Welcome Message</h2>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="label">Current Time:</span>
+              <span class="value" th:text="${currentTime}">Current Time</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Application Version:</span>
+              <span class="value" th:text="${version}">Version</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Framework:</span>
+              <span class="value">Spring Boot 3.4.7</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Java Version:</span>
+              <span class="value">Java 21</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-section">
+          <h3>🛠️ CI/CD Pipeline Features</h3>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h4>📦 Source Control</h4>
+              <p>
+                Code managed in GitHub repository with proper version control
+              </p>
+            </div>
+            <div class="feature-card">
+              <h4>🔧 Build Automation</h4>
+              <p>
+                Maven-based build system with automated compilation and testing
+              </p>
+            </div>
+            <div class="feature-card">
+              <h4>🚀 Continuous Deployment</h4>
+              <p>Jenkins pipeline for automated deployment to AWS EC2</p>
+            </div>
+            <div class="feature-card">
+              <h4>☁️ Cloud Hosting</h4>
+              <p>Deployed and running on AWS EC2 instance</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a href="/health" class="btn btn-primary">Check Health Status</a>
+          <a href="/info" class="btn btn-secondary">📋 App Information</a>
+          <a href="https://github.com" class="btn btn-secondary" target="_blank"
+            >View Source Code</a
+          >
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Spring Boot CI/CD Demo Project</p>
+      </footer>
+    </div>
+  </body>
+</html>
