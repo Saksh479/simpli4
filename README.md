@@ -338,11 +338,3 @@ For issues and questions:
 3. Make your changes
 4. Add tests for new functionality
 5. Submit a pull request
-
-## 📄 License
-
-This project is created for educational and demonstration purposes.
-
----
-
-**© 2025 Spring Boot CI/CD Demo Project**
